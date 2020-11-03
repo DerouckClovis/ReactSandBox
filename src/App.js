@@ -7,17 +7,19 @@ class App extends React.Component {
   state = {
     clients: [
       { id: 1, name: "Clovis" },
-      { id: 2, name: "Thomas" },
-      { id: 3, name: "Cha" }
+      { id: 2, name: "Cha" },
+      { id: 3, name: "Nym" }
     ]
   };
 
-  handleDelete = id => {
-    const clients = [...this.state.clients].filter(client => client.id !== id);
+  handleDelete = (id) => {
+    const clients = [...this.state.clients].filter(
+      (client) => client.id !== id
+    );
     this.setState({ clients });
   };
 
-  handleAdd = client => {
+  handleAdd = (client) => {
     const clients = [...this.state.clients];
     clients.push(client);
 
@@ -31,7 +33,7 @@ class App extends React.Component {
       <div className="App">
         <h1>{title}</h1>
         <ul>
-          {this.state.clients.map(client => (
+          {this.state.clients.map((client) => (
             <Client client={client} onDelete={this.handleDelete} />
           ))}
         </ul>

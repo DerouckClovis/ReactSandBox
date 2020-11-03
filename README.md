@@ -12,6 +12,7 @@ In this code I have used :
 - Events
 - Components
 - Preventing reloads on submit
+- Functional Components
 
 And proper coding habits
 
